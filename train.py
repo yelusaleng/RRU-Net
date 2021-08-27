@@ -12,7 +12,7 @@ import time
 def train_net(net,
               epochs=5,
               batch_size=1,
-              lr=0.1,
+              lr=1e-2,
               val_percent=0.05,
               save_cp=True,
               gpu=False,
@@ -40,12 +40,9 @@ def train_net(net,
                str(gpu)))
 
     N_train = len(iddataset['train'])
-
-    optimizer = optim.SGD(net.parameters(),
-                          lr=lr,
-                          momentum=0.9,
-                          weight_decay=0.0005)
-
+    optimizer = optim.Adam(net.parameters(),
+                           lr=lr,
+                           weight_decay=0)
     criterion = nn.BCELoss()
 
     Train_loss  = []
@@ -121,7 +118,7 @@ def train_net(net,
 
 if __name__ == '__main__':
     epochs, batchsize, scale, gpu = 50, 6, 1, True
-    lr = 1e-1
+    lr = 1e-3
     ft = False
     dataset = 'CASIA'
 
