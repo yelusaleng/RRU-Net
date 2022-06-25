@@ -31,4 +31,4 @@ Please add following information if you cite the paper in your publication:
 }
 ```
 
-Contact yale yalesaleng@gmail.com for any further information.
+Contact yale ywei9395@gmail.com for any further information.
