@@ -52,8 +52,8 @@ if __name__ == "__main__":
     # model: 'Unet', 'Res_Unet', 'Ringed_Res_Unet'
     network = 'Ringed_Res_Unet'
 
-    img = Image.open('your_test_img.png')
-    model = 'result/logs/test.pkl'
+    img = Image.open('dog.jfif')
+    model = r'C:\Users\lee\Desktop\test\RRU-Net\best_model.pth'
 
     if network == 'Unet':
         net = Unet(n_channels=3, n_classes=1)
